@@ -1,0 +1,124 @@
+$loginBg: rgb(235, 235, 235);
+$buttonColor: #355caf;
+$buttonTextColor: #ffffff;
+$errorColor: #f01212;
+$focusColor: #faa540;
+
+%emailAndPassword {
+    border-radius: 4px;
+    border: 1px solid;
+    font-size: 24px;
+    height: 51px;
+    margin: 8px auto 21px;
+    outline: none;
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+%inputTitles {
+    display: block;
+    font-size: 16px;
+    margin: 0;
+}
+
+.login{
+    padding: 32px 32px 22px 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 411px;
+    height: 514px;
+    background-color: #ffffff;
+    display: grid;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logoImg {
+    width: 142px;
+}
+
+.inputs div input:focus{
+    border-color: $focusColor;
+}
+
+.inputsHeading p{
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: bold;
+    height: 19px;
+    margin: 46px 0 35px;
+    text-align: left;
+}
+
+.inputsEmail p, .inputsPassword p {
+    @extend %inputTitles;
+}
+.inputsEmail input, .inputsPassword input {
+    @extend %emailAndPassword;
+}
+
+.newAcc{
+    color: $buttonTextColor;
+}
+.newAcc div p {
+    color: #575757;
+    margin: 0 0 16px;
+}
+
+.loginButton {
+    background-color: $buttonColor;
+    border-radius: 4px;
+    border: none;
+    color: $buttonTextColor;
+    cursor: pointer;
+    height: 50px;
+    margin: 13px auto 7px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+.reg {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.reg a {
+    text-decoration: none;
+    color: #355caf;
+    margin: 16px auto ;
+    font-size: 16px;
+}
+
+.errorMessege{
+    display: block;
+    font-size: 14px;
+    margin: 0 0 19px 1px;
+    color: $errorColor;
+    text-align: left;    
+}
+
+
+// @media only screen and (max-width: 768px){
+//     .login{
+//         width: 100%;
+//         padding-left: 0;
+//         padding-right: 0;
+//     }  
+
+//     .loginEmail input, .loginPassword input {
+//         width: 100%;
+//         background-color:#f01212;
+//     }
+
+// }
