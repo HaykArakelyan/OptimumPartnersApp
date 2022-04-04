@@ -1,0 +1,96 @@
+@import './login.module.scss';
+
+
+
+
+%registrationInputsTitles {
+    @extend %inputTitles;
+}
+
+.register {
+    background-color: $registerBg;
+    left: 50%;
+    padding: 32px 32px 25px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 411px;
+}
+
+.container {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 0.5fr 5fr 1.5fr;
+}
+
+.opLogo {
+    text-align: center;
+}
+
+.opLogo img {
+    width: 127px;
+}
+
+.registerInputs {
+    width: 100%;
+}
+
+.registerInputs div input {
+    @extend %emailAndPassword;
+}
+
+.registerInputs div input:focus {
+    border-color: $focusColor;
+}
+
+.registerInputsHeading {
+    margin: 45px 0 35px;
+}
+
+.registerInputsHeading span {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.registerInputs div div {
+    position: relative;
+}
+
+.errorMessege {
+    left: 1px;  
+    position: absolute;
+    top: 63px;
+}
+
+.registerInputs div p {
+    @extend %inputTitles;
+}
+
+.registerButton {
+    position: relative;
+}
+
+.registerButton  button {
+    @extend %submitButton;
+}
+
+.redirectToSignIn{
+    box-sizing: border-box;
+    margin-top: 37px;
+    text-align: center;
+}
+
+.redirectToSignIn a {
+    @extend %redirect;
+}
+
+.redirectToSignIn p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .register {
+        width: 100%;
+    }
+}
